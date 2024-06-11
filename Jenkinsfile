@@ -10,7 +10,7 @@ pipeline {
     
     environment {
     dockerHubCredentialsID	    = 'DockerHub'  		    			// DockerHub credentials ID.
-    imageName   		        = 'alikhames/java-app'     			        // DockerHub repo/image name.
+    imageName   		    = 'alikhames/java-app'     			        // DockerHub repo/image name.
 	openshiftCredentialsID	    = 'openshift'	    				// KubeConfig credentials ID.   
 	nameSpace                   = 'alikhames'
 	clusterUrl                  = 'https://api.ocp-training.ivolve-test.com:6443'
@@ -87,9 +87,7 @@ pipeline {
 	stage('Deploy on ArgoCD') {
             steps {
                 script { 
-                	dir('Application') {
-			           deployOnArgoCD("${k8sCredentialsID}")
-                    }
+			deployOnArgoCD("${k8sCredentialsID}")
                 }
             }
         }
