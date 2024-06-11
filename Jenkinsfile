@@ -4,7 +4,7 @@ pipeline {
     
     environment {
     dockerHubCredentialsID	    = 'DockerHub'  		    			// DockerHub credentials ID.
-    imageName   		    = 'alikhames/java-app'     			        // DockerHub repo/image name.
+    imageName   		        = 'alikhames/java-app'     			        // DockerHub repo/image name.
 	openshiftCredentialsID	    = 'openshift'	    				// KubeConfig credentials ID.   
 	nameSpace                   = 'alikhames'
 	clusterUrl                  = 'https://api.ocp-training.ivolve-test.com:6443'
@@ -44,58 +44,39 @@ pipeline {
                     dir('Application') {
                                 sonarQubeAnalysis()	
                         }
-
-		    //    withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
-            //             sh  """
-			//                  chmod +x ./gradlew
-            //                 ./gradlew sonar \
-            //                 -Dsonar.projectKey=${SONAR_PROJECT_KEY} \
-            //                 -Dsonar.host.url=${sonarqubeUrl} \
-            //                 -Dsonar.token=${SONAR_TOKEN} \
-            //                 -Dsonar.scm.provider=git \
-            //                 -Dsonar.java.binaries=build/classes
-            //                 """
-            //    }
             }
         }
     }
 
-        stage('Build and Push Docker Image') {
-            steps {
-                script {
-                 	dir('Application') {
-                 	        buildandPushDockerImage("${dockerHubCredentialsID}", "${imageName}")
-                    }	
-                }
+    stage('Build and Push Docker Image') {
+        steps {
+            script {
+                dir('Application') {
+                        buildandPushDockerImage("${dockerHubCredentialsID}", "${imageName}")
+                }	
             }
         }
-        stage('Edit new image in deployment.yaml file') {
-                steps {
-                    script { 
-                        
-                        editNewImage("${githubToken}", "${imageName}", "${gitUserEmail}", "${gitUserName}", "${gitRepoName}")
-                    
-                  }
-                }
-            }
-	stage('Deploy on ArgoCD') {
+    }
+    stage('Edit new image in deployment.yaml file') {
             steps {
                 script { 
-			deployOnArgoCD("${k8sCredentialsID}")
+                    
+                    editNewImage("${githubToken}", "${imageName}", "${gitUserEmail}", "${gitUserName}", "${gitRepoName}")
+                
                 }
             }
         }
 
-   //      stage('Deploy on OpenShift Cluster') {
-   //          steps {
-   //              script { 
-			// dir('oc') {
-                        
-			// 	deployOnOc("${openshiftCredentialsID}", "${nameSpace}", "${clusterUrl}")
-			// }
-   //              }
-   //          }
-   //      }
+    stage('Deploy on OpenShift Cluster') {
+        steps {
+            script { 
+                dir('oc') {
+                            
+                    deployOnOc("${openshiftCredentialsID}", "${nameSpace}", "${clusterUrl}")
+                }
+            }
+        }
+    }
     }
 
     post {
