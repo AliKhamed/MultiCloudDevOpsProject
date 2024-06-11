@@ -8,12 +8,11 @@ pipeline {
 	openshiftCredentialsID	    = 'openshift'	    				// KubeConfig credentials ID.   
 	nameSpace                   = 'alikhames'
 	clusterUrl                  = 'https://api.ocp-training.ivolve-test.com:6443'
-	SONAR_PROJECT_KEY           = 'ivolve_java_app'
 	gitRepoName 	            = 'MultiCloudDevOpsProject'
     gitUserName 	            = 'Alikhamed'
 	gitUserEmail                = 'Alikhames566@gmail.com'
 	githubToken                 = 'github-token'
-	sonarqubeUrl                = 'http://192.168.49.1:9000/'
+	sonarqubeUrl                = 'http://54.211.31.224:9000/'
 	sonarTokenCredentialsID     = 'sonar-token'
 	k8sCredentialsID	        = 'kubernetes'
     }
