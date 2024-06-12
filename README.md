@@ -94,11 +94,11 @@ git clone <repository-url>
 cd <repository-directory>/terraform
 
 ```
-2. Configure Variables:
+2. **Configure Variables:**
 
     Edit the terraform.tfvars file to set values for your AWS setup.
 
-3. Initialize Terraform:
+3. **Initialize Terraform:**
 
     ```
     terraform init
@@ -106,7 +106,7 @@ cd <repository-directory>/terraform
     ```
     ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/terrInit.png)
 
-4. Review the Plan:
+4. **Review the Plan:**
 
     ```
      terraform plan
@@ -114,7 +114,7 @@ cd <repository-directory>/terraform
     ```
     ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/terraPlan.png)
 
-5. Apply the Configuration:
+5. **Apply the Configuration:**
 
     ```
     terraform apply
@@ -124,7 +124,7 @@ cd <repository-directory>/terraform
 
     ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/terraApply.png)
 
-6. AWS Resources Created:
+6. **AWS Resources Created:**
 
     - EC2 Instances
 
