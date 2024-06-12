@@ -12,7 +12,7 @@ This project demonstrates a complete CI/CD pipeline setup for a Java application
 - [Running the Pipeline](#running-the-pipeline)
 - [Checking Results](#checking-results)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## Prerequisites
 
@@ -89,11 +89,11 @@ This project demonstrates a complete CI/CD pipeline setup for a Java application
 
 1. **Clone the Repository:**
 
-```
-git clone <repository-url>
-cd <repository-directory>/terraform
+    ```
+    git clone <repository-url>
+    cd <repository-directory>/terraform
 
-```
+    ```
 2. **Configure Variables:**
 
     Edit the terraform.tfvars file to set values for your AWS setup.
@@ -143,3 +143,88 @@ cd <repository-directory>/terraform
     - S3 Bucket for Terraform state file backend
 
         ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/s3.png)
+
+
+## Ansible Setup
+
+1. **Navigate to Ansible Directory:**
+    ```
+    cd ../Ansible
+
+    ```
+2. **Install Jenkins, SonarQube, Docker, and OC CLI:**
+
+    Use Ansible roles to install the necessary services.
+
+3. **Dynamic Inventory:**
+
+    Use the aws_ec2 plugin for dynamic inventory.
+
+4. **Generate Private Key:**
+
+    Terraform will generate private_key.pem and add it to the Ansible folder.
+
+5. **Run Ansible Playbook:**
+
+    ```
+    ansible-playbook -i aws_ec2.yml playbook.yml
+
+    ```
+    ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/ansibleApply.png)
+    
+
+6. **Outputs:**
+
+- SonarQube token
+
+    ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/sonarToken1.png)
+
+- Jenkins initial password
+
+    ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/jenkinsPass.png)
+
+
+## Jenkins Configuration
+
+1. **Install Plugins:**
+        Suggested plugins
+        SonarQube Scanner
+        Groovy Plugins
+
+2. **Create Credentials:**
+        GitHub token
+        SonarQube token
+        OpenShift token
+        DockerHub token
+
+3. **Configure Shared Library:**
+
+4. **Add repository URL and name in Jenkins system configuration:**
+
+5. **Create Pipeline:**
+        Create a new pipeline.
+        Choose SCM and add repository URL and branch name.
+
+## Running the Pipeline
+
+    Run Pipeline:
+
+    Execute the pipeline from Jenkins.
+
+    Monitor Pipeline:
+
+    Ensure the pipeline runs successfully.
+
+## Checking Results
+
+    SonarQube Quality Gate:
+
+    Review code quality reports on SonarQube.
+
+    Application Deployment:
+
+    Verify your application is running on the OpenShift cluster.
+
+## Contributing
+
+    Contributions are welcome! Please submit a pull request or open an issue for any suggestions or improvements.
