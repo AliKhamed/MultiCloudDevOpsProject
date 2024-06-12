@@ -7,6 +7,7 @@ public_subnet_az   = "us-east-1a"
 instance_type      = "t2.medium"
 key_name           = "aws-key"
 bucket-name        = "alikhames566-s3-bucket-terraform-fstat"
+volume_size        = 20
 sg = {
   ingress_count = [{ count = 3 }]
   ingress_rule = [{

@@ -12,7 +12,7 @@ pipeline {
     gitUserName 	            = 'Alikhamed'
 	gitUserEmail                = 'Alikhames566@gmail.com'
 	githubToken                 = 'github-token'
-	sonarqubeUrl                = 'http://54.211.31.224:9000/'
+	sonarqubeUrl                = 'http://54.80.213.149:9000/'
 	sonarTokenCredentialsID     = 'sonar-token'
 	k8sCredentialsID	        = 'kubernetes'
     }

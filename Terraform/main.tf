@@ -18,6 +18,7 @@ module "ec2" {
   vpc_id        = module.network.vpc_id
   sg            = var.sg
   key_name      = var.key_name
+  volume_size   = var.volume_size
 }
 
 module "cloudwatch" {

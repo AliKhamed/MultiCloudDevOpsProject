@@ -25,7 +25,9 @@ variable "instance_type" {
 variable "key_name" {
   type = string
 }
-
+variable "volume_size" {
+  type = number
+}
 variable "bucket-name" {
   type = string
 }
