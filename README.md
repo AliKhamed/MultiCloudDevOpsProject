@@ -187,23 +187,46 @@ This project demonstrates a complete CI/CD pipeline setup for a Java application
 ## Jenkins Configuration
 
 1. **Install Plugins:**
-        Suggested plugins
-        SonarQube Scanner
-        Groovy Plugins
+    - Suggested plugins
+
+    ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/jenkinsPlugins.png)
+
+    - SonarQube Scanner
+    
+    ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/sonarPlugins.png)
+
+    - Groovy Plugins: To Shared Library
+
+    ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/plugins2.png)
+
 
 2. **Create Credentials:**
-        GitHub token
-        SonarQube token
-        OpenShift token
-        DockerHub token
+    - GitHub token
+    - SonarQube token
+    - OpenShift token
+    - DockerHub token
+
+    ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/cred1.png)
+
 
 3. **Configure Shared Library:**
 
-4. **Add repository URL and name in Jenkins system configuration:**
+- Add repository URL and name in Jenkins system configuration:
 
-5. **Create Pipeline:**
-        Create a new pipeline.
-        Choose SCM and add repository URL and branch name.
+    ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/sharedLib.png)
+    ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/sharedLib2.png)
+
+
+
+4. **Create Pipeline:**
+
+    - Create a new pipeline.
+
+    ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/pipeline1.png)
+
+    - Choose SCM and add repository URL and branch name.
+
+    ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/pipeline2.png)
 
 ## Running the Pipeline
 
