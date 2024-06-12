@@ -230,23 +230,52 @@ This project demonstrates a complete CI/CD pipeline setup for a Java application
 
 ## Running the Pipeline
 
-    Run Pipeline:
-
+1. **Run Pipeline:**
     Execute the pipeline from Jenkins.
 
-    Monitor Pipeline:
+
+2. **Monitor Pipeline:**
 
     Ensure the pipeline runs successfully.
 
+![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/pipelineSuccess1.png)
+![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/pipelineSuccess2.png)
+
+
 ## Checking Results
 
-    SonarQube Quality Gate:
+1. **SonarQube Quality Gate:**
 
     Review code quality reports on SonarQube.
 
-    Application Deployment:
+![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/sonarSuccess1.png)
+
+![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/sonarSuccess2.png)
+
+![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/sonarSuccess3.png)
+
+
+2. **Application Deployment:**
 
     Verify your application is running on the OpenShift cluster.
+
+    Login In Your Cluster and Run 
+
+    ```
+    oc get all -n namespace
+
+    ```
+
+![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/oc1.png)
+
+Get Application Route
+
+![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/oc2.png)
+
+Past It in Your Browser
+
+![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/applicationRun.png)
+
 
 ## Contributing
 
