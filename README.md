@@ -87,7 +87,7 @@ This project demonstrates a complete CI/CD pipeline setup for a Java application
 ```
 ## Terraform Setup
 
-1. Clone the Repository:
+1. **Clone the Repository:**
 
 ```
 git clone <repository-url>
