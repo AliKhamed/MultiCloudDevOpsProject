@@ -104,7 +104,7 @@ cd <repository-directory>/terraform
     terraform init
 
     ```
-![](https://github.com/AliKhamed/MultiCloudDevOpsProject/tree/dev/screenshots/terrInit.png)
+    ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/terrInit.png)
 
 4. Review the Plan:
 
