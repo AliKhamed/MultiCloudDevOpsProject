@@ -112,7 +112,7 @@ cd <repository-directory>/terraform
      terraform plan
 
     ```
-    ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/tree/dev/screenshots/terraPlan.png)
+    ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/terraPlan.png)
 
 5. Apply the Configuration:
 
@@ -122,24 +122,24 @@ cd <repository-directory>/terraform
 
     Confirm the action by typing yes when prompted.
 
-    ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/tree/dev/screenshots/terraApply.png)
+    ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/terraApply.png)
 
 6. AWS Resources Created:
 
     - EC2 Instances
 
-        ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/tree/dev/screenshots/ec2.png)
+        ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/ec2.png)
 
     - VPC
 
-        ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/tree/dev/screenshots/vpc2.png)
+        ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/vpc2.png)
 
     - CloudWatch with SNS topic for email notifications
 
-        ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/tree/dev/screenshots/cloudwatch.png)
-        ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/tree/dev/screenshots/sns.png)
-        ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/tree/dev/screenshots/snsEmail.png)
+        ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/cloudwatch.png)
+        ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/sns.png)
+        ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/snsEmail.png)
 
     - S3 Bucket for Terraform state file backend
 
-        ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/tree/dev/screenshots/s3.png)
+        ![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/s3.png)
