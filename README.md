@@ -1,6 +1,6 @@
 # Multi Cloud DevOps Project
 
-![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/dev/screenshots/appDiagram.gif)
+![](https://github.com/AliKhamed/MultiCloudDevOpsProject/blob/main/screenshots/appDiagram.gif)
 
 
 This project demonstrates a complete CI/CD pipeline setup for a Java application using Terraform, Ansible, Jenkins, SonarQube, and OpenShift. The pipeline begins with infrastructure provisioning on AWS using Terraform, followed by configuration management and application deployment using Ansible, Jenkins, SonarQube and Deploy on OpenShift Cluster.
